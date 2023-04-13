@@ -47,9 +47,14 @@ class _HomeScreenState extends State<HomeScreen> {
                     InkWell(
                       onTap: () {},
                       child: Container(
-                        height: 25,
+                        height: 30,
                         width: 150,
-                        color: Colors.black,
+                        decoration: const BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(5),
+                          )
+                        ),
                         child: Center(
                             child: Text(
                           "এখানে এড করুন",
@@ -102,11 +107,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 InkWell(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const PataliGur()),
-                    );
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(
+                    //       builder: (context) => const PataliGur()),
+                    // );
                   },
                   child: Container(
                       height: 130,
@@ -130,11 +135,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 InkWell(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const AmerAchar()),
-                    );
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(
+                    //       builder: (context) => const AmerAchar()),
+                    // );
                   },
                   child: Container(
                       height: 130,
@@ -162,11 +167,11 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 InkWell(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const AmerAchar()),
-                    );
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(
+                    //       builder: (context) => const AmerAchar()),
+                    // );
                   },
                   child: Container(
                       height: 130,
@@ -189,11 +194,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 InkWell(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const KhatiModu()),
-                    );
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(
+                    //       builder: (context) => const KhatiModu()),
+                    // );
                   },
                   child: Container(
                       height: 130,
@@ -216,11 +221,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 InkWell(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const Gi()),
-                    );
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(
+                    //       builder: (context) => const Gi()),
+                    // );
                   },
                   child: Container(
                       height: 130,

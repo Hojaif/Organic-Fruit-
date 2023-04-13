@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'Screen/HomeScreen.dart';
 
 
-
 void main(){
   runApp(ShoppingApp ());
 }

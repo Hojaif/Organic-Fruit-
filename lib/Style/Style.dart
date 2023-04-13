@@ -5,6 +5,7 @@ TextStyle Head1Text(textColor) {
     color: textColor,
     fontSize: 27,
     fontWeight: FontWeight.w700,
+    fontFamily: 'HindSiliguri'
   );
 }
 
@@ -13,6 +14,7 @@ TextStyle Head2Text(textColor) {
     color: textColor,
     fontSize: 18,
     fontWeight: FontWeight.w600,
+      fontFamily: 'HindSiliguri'
   );
 }
 
@@ -21,6 +23,7 @@ TextStyle Head3Text(textColor) {
     color: textColor,
     fontSize: 14,
     fontWeight: FontWeight.w500,
+      fontFamily: 'HindSiliguri'
   );
 }
 

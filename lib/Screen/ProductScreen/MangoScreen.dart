@@ -14,7 +14,10 @@ class _MangoState extends State<Mango> {
     {
       "title":"ফজলি আম",
       "image":"https://i.postimg.cc/1RYDD0fP/Hapus-Mango-removebg-preview.png",
-      "price":"৳২০টাকা/কেজি"
+      "price":"৳২০টাকা/কেজি",
+      "koliti":"কোয়ালিটি :Best",
+      "jat":"জাতঃফজলি",
+      "stoke":"স্টেকঃপণ্য টি খুব তারাতারি পাও্যা যযাবে"
     },
     {
       "title":"ফজলি আম",
@@ -116,6 +119,7 @@ class _MangoState extends State<Mango> {
                   Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => Ditels(
                         imageUrl: imageData[index]["image"],
+                        title: imageData[index]["title"],
                       )));
                 },
                 child: Card(

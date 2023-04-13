@@ -3,7 +3,8 @@ import 'package:shoppingapp/Style/Style.dart';
 
 class Ditels extends StatelessWidget {
   String imageUrl;
-  Ditels({Key? key, required this.imageUrl}) : super(key: key);
+  String title;
+  Ditels({Key? key, required this.imageUrl,required this.title}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -121,14 +122,21 @@ class Ditels extends StatelessWidget {
               ],
             ),
           ),
+          SizedBox(height: 20,),
           Container(
             height: 300,
-            child: Column(
-              children: [
-                Text(""),
-                Text("data"),
+            child: Padding(
+              padding: const EdgeInsets.only(right: 180),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(title,style: Head1Text(Colors.black),),
+                  SizedBox(height: 7,),
+                  Text(""),
 
-              ],
+                ],
+              ),
             ),
           ),
         ],
