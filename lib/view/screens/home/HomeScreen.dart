@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shoppingapp/view/screens/ProductScreen/AmerAchar.dart';
-import 'package:shoppingapp/view/screens/ProductScreen/Gi.dart';
-import 'package:shoppingapp/view/screens/ProductScreen/KhatiModu.dart';
-import 'package:shoppingapp/view/screens/ProductScreen/MangoScreen.dart';
-import 'package:shoppingapp/view/screens/ProductScreen/PataliGur.dart';
+import 'package:get/get.dart';
 import 'package:shoppingapp/util/style.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -14,8 +10,37 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  final List<Map<String, dynamic>> category = [
+    {
+      'title': 'আম',
+      'image': 'https://i.postimg.cc/CK9RKv4W/download-5-removebg-preview.png',
+    },
+    {
+      'title': 'পাটালি গুর',
+      'image': 'https://i.postimg.cc/dQWCK1Kk/download-4-removebg-preview.pngg',
+    },
+    {
+      'title': 'আমের আচার',
+      'image': 'https://i.postimg.cc/0QqcwCkB/images-3-removebg-preview.png',
+    },
+    {
+      'title': 'ফজলি আম',
+      'image': 'https://i.postimg.cc/1RYDD0fP/Hapus-Mango-removebg-preview.png',
+    },
+    {
+      'title': 'খাটি মধু',
+      'image': 'https://i.postimg.cc/3rCyFF1H/download-6.jpg',
+    },
+    {
+      'title': 'ঘি',
+      'image': 'https://i.postimg.cc/L5wLFHbZ/images-5-removebg-preview.png',
+    },
+  ];
   @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
+    final itemWidth = (MediaQuery.of(context).size.width - 32) /
+        (MediaQuery.of(context).size.width > 800 ? 6 : 3);
     return Scaffold(
       appBar: AllAppBar(),
       drawer: AllDrawer(),
@@ -23,8 +48,8 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           children: [
             Container(
-              height: 350,
-              width: 400,
+              height: size.height * 0.4,
+              width: size.width,
               color: Colors.lightGreen,
               child: Padding(
                 padding: const EdgeInsets.only(top: 15),
@@ -32,8 +57,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     SizedBox(
-                        height: 200,
-                        width: 150,
+                        height: size.height * 0.2,
+                        width: size.width * 0.4,
                         child: Image.network(
                             "https://i.postimg.cc/1RYDD0fP/Hapus-Mango-removebg-preview.png")),
                     Text(
@@ -75,177 +100,70 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(
               height: 15,
             ),
-            Row(
-              children: [
-                InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const Mango()),
-                    );
-                  },
-                  child: Container(
-                      height: 130,
-                      width: 130,
-                      child: Card(
-                        child: Column(
-                          children: [
-                            SizedBox(
-                                height: 90,
-                                width: 90,
-                                child: Image.network(
-                                    "https://i.postimg.cc/CK9RKv4W/download-5-removebg-preview.png")),
-                            Text(
-                              "আম",
-                              style: Head2Text(Colors.black),
-                            )
-                          ],
-                        ),
-                      )),
+            GridView.builder(
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                padding: const EdgeInsets.all(8),
+                itemCount: category.length,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount:
+                      MediaQuery.of(context).size.width > 800 ? 6 : 3,
+                  childAspectRatio: itemWidth / (itemWidth + 32),
                 ),
-                InkWell(
-                  onTap: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //       builder: (context) => const PataliGur()),
-                    // );
-                  },
-                  child: Container(
-                      height: 130,
-                      width: 130,
-                      child: Card(
-                        child: Column(
-                          children: [
-                            SizedBox(
-                              height: 90,
-                              width: 90,
-                              child: Image.network(
-                                  "https://i.postimg.cc/dQWCK1Kk/download-4-removebg-preview.png"),
+                itemBuilder: (context, index) {
+                  return Card(
+                    child: InkWell(
+                      onTap: () => {
+                        Get.toNamed(category[index]['route']),
+                      },
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            // decoration: const BoxDecoration(
+                            //   shape: BoxShape.circle,
+                            //   color: Colors.lightGreen,
+                            // ),
+                            padding: EdgeInsets.all(
+                                MediaQuery.of(context).size.width > 800
+                                    ? 16
+                                    : 8),
+                            // child: Icon(
+                            //   category[index]['image'],
+                            //   color: Colors.white,
+                            //   size: MediaQuery.of(context).size.width > 800
+                            //       ? 42
+                            //       : 48,
+                            // ),
+                            child: Image.network(
+                              category[index]['image'],
+                              height: MediaQuery.of(context).size.width > 800
+                                  ? 42
+                                  : 48,
+                              width: MediaQuery.of(context).size.width > 800
+                                  ? 42
+                                  : 48,
                             ),
-                            Text(
-                              "পাটালি গুর",
-                              style: Head2Text(Colors.black),
-                            )
-                          ],
-                        ),
-                      )),
-                ),
-                InkWell(
-                  onTap: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //       builder: (context) => const AmerAchar()),
-                    // );
-                  },
-                  child: Container(
-                      height: 130,
-                      width: 130,
-                      child: Card(
-                        child: Column(
-                          children: [
-                            SizedBox(
-                              height: 90,
-                              width: 90,
-                              child: Image.network(
-                                  "https://i.postimg.cc/0QqcwCkB/images-3-removebg-preview.png"),
+                          ),
+                          SizedBox(
+                              height: MediaQuery.of(context).size.width > 800
+                                  ? 8
+                                  : 16),
+                          Text(
+                            category[index]['title'],
+                            style: TextStyle(
+                              fontFamily: 'solaimanlipi',
+                              color: Colors.black,
+                              fontSize: MediaQuery.of(context).size.width > 800
+                                  ? 25
+                                  : 18,
                             ),
-                            Text(
-                              "আমের আচার",
-                              style: Head2Text(Colors.black),
-                            )
-                          ],
-                        ),
-                      )),
-                ),
-              ],
-            ),
-            Row(
-              children: [
-                InkWell(
-                  onTap: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //       builder: (context) => const AmerAchar()),
-                    // );
-                  },
-                  child: Container(
-                      height: 130,
-                      width: 130,
-                      child: Card(
-                        child: Column(
-                          children: [
-                            SizedBox(
-                                height: 90,
-                                width: 90,
-                                child: Image.network(
-                                    "https://i.postimg.cc/xdhsg20q/images-4.jpg")),
-                            Text(
-                              "আমের চারা",
-                              style: Head2Text(Colors.black),
-                            )
-                          ],
-                        ),
-                      )),
-                ),
-                InkWell(
-                  onTap: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //       builder: (context) => const KhatiModu()),
-                    // );
-                  },
-                  child: Container(
-                      height: 130,
-                      width: 130,
-                      child: Card(
-                        child: Column(
-                          children: [
-                            SizedBox(
-                                height: 90,
-                                width: 90,
-                                child: Image.network(
-                                    "https://i.postimg.cc/3rCyFF1H/download-6.jpg")),
-                            Text(
-                              "খাটি মধু",
-                              style: Head2Text(Colors.black),
-                            )
-                          ],
-                        ),
-                      )),
-                ),
-                InkWell(
-                  onTap: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //       builder: (context) => const Gi()),
-                    // );
-                  },
-                  child: Container(
-                      height: 130,
-                      width: 130,
-                      child: Card(
-                        child: Column(
-                          children: [
-                            SizedBox(
-                                height: 90,
-                                width: 90,
-                                child: Image.network(
-                                    "https://i.postimg.cc/L5wLFHbZ/images-5-removebg-preview.png")),
-                            Text(
-                              "ঘি",
-                              style: Head2Text(Colors.black),
-                            )
-                          ],
-                        ),
-                      )),
-                ),
-              ],
-            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                }),
           ],
         ),
       ),
