@@ -24,6 +24,14 @@ TextStyle Head3Text(textColor) {
       fontFamily: 'HindSiliguri');
 }
 
+TextStyle Head4Text(textColor) {
+  return TextStyle(
+      color: textColor,
+      fontSize: 16,
+      fontWeight: FontWeight.bold,
+      fontFamily: 'solaimanlipi');
+}
+
 // AppBar
 AppBar AllAppBar() {
   return AppBar(
@@ -113,37 +121,55 @@ Drawer AllDrawer() {
             children: [
               ListTile(
                 leading: const Icon(Icons.arrow_circle_right_outlined),
-                title: const Text("আম"),
+                title: Text(
+                  "আম",
+                  style: Head4Text(Colors.black),
+                ),
                 minLeadingWidth: 0,
                 onTap: () {},
               ),
               ListTile(
                 leading: const Icon(Icons.arrow_circle_right_outlined),
-                title: const Text("পাটালি গুড়"),
+                title: Text(
+                  "পাটালি গুড়",
+                  style: Head4Text(Colors.black),
+                ),
                 minLeadingWidth: 0,
                 onTap: () {},
               ),
               ListTile(
                 leading: const Icon(Icons.arrow_circle_right_outlined),
-                title: const Text("আমের আঁচার"),
+                title: Text(
+                  "আমের আঁচার",
+                  style: Head4Text(Colors.black),
+                ),
                 minLeadingWidth: 0,
                 onTap: () {},
               ),
               ListTile(
                 leading: const Icon(Icons.arrow_circle_right_outlined),
-                title: const Text("আমের চারা"),
+                title: Text(
+                  "আমের চারা",
+                  style: Head4Text(Colors.black),
+                ),
                 minLeadingWidth: 0,
                 onTap: () {},
               ),
               ListTile(
                 leading: const Icon(Icons.arrow_circle_right_outlined),
-                title: const Text("খাঁটি মধু"),
+                title: Text(
+                  "খাঁটি মধু",
+                  style: Head4Text(Colors.black),
+                ),
                 minLeadingWidth: 0,
                 onTap: () {},
               ),
               ListTile(
                 leading: const Icon(Icons.arrow_circle_right_outlined),
-                title: const Text("ঘি"),
+                title: Text(
+                  "ঘি",
+                  style: Head4Text(Colors.black),
+                ),
                 minLeadingWidth: 0,
                 onTap: () {},
               ),
@@ -160,13 +186,19 @@ Drawer AllDrawer() {
             children: [
               ListTile(
                 leading: const Icon(Icons.logout),
-                title: const Text("লগইন"),
+                title: Text(
+                  "লগইন",
+                  style: Head4Text(Colors.black),
+                ),
                 minLeadingWidth: 0,
                 onTap: () {},
               ),
               ListTile(
                 leading: const Icon(Icons.notifications_rounded),
-                title: const Text("বার্তা"),
+                title: Text(
+                  "বার্তা",
+                  style: Head4Text(Colors.black),
+                ),
                 minLeadingWidth: 0,
                 onTap: () {},
               ),
@@ -191,7 +223,10 @@ Drawer AllDrawer() {
                       Icons.question_mark_rounded,
                       size: 18,
                     )),
-                title: const Text("কিভাবে কিনবেন"),
+                title: Text(
+                  "কিভাবে কিনবেন",
+                  style: Head4Text(Colors.black),
+                ),
                 minLeadingWidth: 0,
                 onTap: () {},
               ),
@@ -205,13 +240,19 @@ Drawer AllDrawer() {
                       Icons.question_mark_outlined,
                       size: 18,
                     )),
-                title: const Text("আমদের সম্পর্কে"),
+                title: Text(
+                  "আমদের সম্পর্কে",
+                  style: Head4Text(Colors.black),
+                ),
                 minLeadingWidth: 0,
                 onTap: () {},
               ),
               ListTile(
                 leading: const Icon(Icons.message),
-                title: const Text("যোগাযোগ "),
+                title: Text(
+                  "যোগাযোগ ",
+                  style: Head4Text(Colors.black),
+                ),
                 minLeadingWidth: 0,
                 onTap: () {},
               ),
@@ -225,7 +266,10 @@ Drawer AllDrawer() {
                       Icons.question_mark_rounded,
                       size: 18,
                     )),
-                title: const Text("শর্ত সমুহ"),
+                title: Text(
+                  "শর্ত সমুহ",
+                  style: Head4Text(Colors.black),
+                ),
                 minLeadingWidth: 0,
                 onTap: () {},
               ),
@@ -239,7 +283,10 @@ Drawer AllDrawer() {
                       Icons.question_mark_rounded,
                       size: 18,
                     )),
-                title: const Text("ফেরত নীতি"),
+                title: Text(
+                  "ফেরত নীতি",
+                  style: Head4Text(Colors.black),
+                ),
                 minLeadingWidth: 0,
                 onTap: () {},
               ),
