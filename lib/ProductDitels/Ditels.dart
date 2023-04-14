@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:shoppingapp/Style/Style.dart';
+import 'package:shoppingapp/util/style.dart';
 
 class Ditels extends StatelessWidget {
   String imageUrl;
   String title;
-  Ditels({Key? key, required this.imageUrl,required this.title}) : super(key: key);
+  Ditels({Key? key, required this.imageUrl, required this.title})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -122,7 +123,9 @@ class Ditels extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 20,),
+          SizedBox(
+            height: 20,
+          ),
           Container(
             height: 300,
             child: Padding(
@@ -131,10 +134,14 @@ class Ditels extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text(title,style: Head1Text(Colors.black),),
-                  SizedBox(height: 7,),
+                  Text(
+                    title,
+                    style: Head1Text(Colors.black),
+                  ),
+                  SizedBox(
+                    height: 7,
+                  ),
                   Text(""),
-
                 ],
               ),
             ),

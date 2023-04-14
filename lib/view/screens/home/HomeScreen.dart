@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:shoppingapp/Screen/ProductScreen/AmerAchar.dart';
-import 'package:shoppingapp/Screen/ProductScreen/Gi.dart';
-import 'package:shoppingapp/Screen/ProductScreen/KhatiModu.dart';
-import 'package:shoppingapp/Screen/ProductScreen/MangoScreen.dart';
-import 'package:shoppingapp/Screen/ProductScreen/PataliGur.dart';
-import 'package:shoppingapp/Style/Style.dart';
+import 'package:shoppingapp/view/screens/ProductScreen/AmerAchar.dart';
+import 'package:shoppingapp/view/screens/ProductScreen/Gi.dart';
+import 'package:shoppingapp/view/screens/ProductScreen/KhatiModu.dart';
+import 'package:shoppingapp/view/screens/ProductScreen/MangoScreen.dart';
+import 'package:shoppingapp/view/screens/ProductScreen/PataliGur.dart';
+import 'package:shoppingapp/util/style.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -50,11 +50,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         height: 30,
                         width: 150,
                         decoration: const BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(5),
-                          )
-                        ),
+                            color: Colors.black,
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(5),
+                            )),
                         child: Center(
                             child: Text(
                           "এখানে এড করুন",
@@ -82,8 +81,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(
-                          builder: (context) => const Mango()),
+                      MaterialPageRoute(builder: (context) => const Mango()),
                     );
                   },
                   child: Container(

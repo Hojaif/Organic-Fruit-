@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'Screen/HomeScreen.dart';
+import 'view/screens/home/HomeScreen.dart';
 
-
-void main(){
-  runApp(ShoppingApp ());
+void main() {
+  runApp(const ShoppingApp());
 }
 
 class ShoppingApp extends StatelessWidget {

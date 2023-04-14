@@ -2,29 +2,26 @@ import 'package:flutter/material.dart';
 
 TextStyle Head1Text(textColor) {
   return TextStyle(
-    color: textColor,
-    fontSize: 27,
-    fontWeight: FontWeight.w700,
-    fontFamily: 'HindSiliguri'
-  );
+      color: textColor,
+      fontSize: 27,
+      fontWeight: FontWeight.w700,
+      fontFamily: 'HindSiliguri');
 }
 
 TextStyle Head2Text(textColor) {
   return TextStyle(
-    color: textColor,
-    fontSize: 18,
-    fontWeight: FontWeight.w600,
-      fontFamily: 'HindSiliguri'
-  );
+      color: textColor,
+      fontSize: 18,
+      fontWeight: FontWeight.w600,
+      fontFamily: 'HindSiliguri');
 }
 
 TextStyle Head3Text(textColor) {
   return TextStyle(
-    color: textColor,
-    fontSize: 14,
-    fontWeight: FontWeight.w500,
-      fontFamily: 'HindSiliguri'
-  );
+      color: textColor,
+      fontSize: 14,
+      fontWeight: FontWeight.w500,
+      fontFamily: 'HindSiliguri');
 }
 
 // AppBar
