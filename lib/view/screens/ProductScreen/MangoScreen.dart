@@ -15,48 +15,84 @@ class _MangoState extends State<Mango> {
     {
       "title": "ফজলি আম",
       "image": "https://i.postimg.cc/1RYDD0fP/Hapus-Mango-removebg-preview.png",
-      "price": "৳২০টাকা/কেজি"
-    },
-    {
+      "price": "৳২০টাকা/কেজি",
+      "koliti":"কোয়ালিটি:Best",
+      "jat":"জাতঃফজলি",
+      "sthok":"স্টোকঃপন্যটি খুব শিগ্রই পাওয়া যাবে"
+
+    }, {
       "title": "ফজলি আম",
       "image": "https://i.postimg.cc/1RYDD0fP/Hapus-Mango-removebg-preview.png",
-      "price": "৳২০টাকা/কেজি"
-    },
-    {
+      "price": "৳২০টাকা/কেজি",
+      "koliti":"কোয়ালিটি:Best",
+      "jat":"জাতঃফজলি",
+      "sthok":"স্টোকঃপন্যটি খুব শিগ্রই পাওয়া যাবে"
+
+    }, {
       "title": "ফজলি আম",
       "image": "https://i.postimg.cc/1RYDD0fP/Hapus-Mango-removebg-preview.png",
-      "price": "৳২০টাকা/কেজি"
-    },
-    {
+      "price": "৳২০টাকা/কেজি",
+      "koliti":"কোয়ালিটি:Best",
+      "jat":"জাতঃফজলি",
+      "sthok":"স্টোকঃপন্যটি খুব শিগ্রই পাওয়া যাবে"
+
+    }, {
       "title": "ফজলি আম",
       "image": "https://i.postimg.cc/1RYDD0fP/Hapus-Mango-removebg-preview.png",
-      "price": "৳২০টাকা/কেজি"
-    },
-    {
+      "price": "৳২০টাকা/কেজি",
+      "koliti":"কোয়ালিটি:Best",
+      "jat":"জাতঃফজলি",
+      "sthok":"স্টোকঃপন্যটি খুব শিগ্রই পাওয়া যাবে"
+
+    }, {
       "title": "ফজলি আম",
       "image": "https://i.postimg.cc/1RYDD0fP/Hapus-Mango-removebg-preview.png",
-      "price": "৳২০টাকা/কেজি"
-    },
-    {
+      "price": "৳২০টাকা/কেজি",
+      "koliti":"কোয়ালিটি:Best",
+      "jat":"জাতঃফজলি",
+      "sthok":"স্টোকঃপন্যটি খুব শিগ্রই পাওয়া যাবে"
+
+    }, {
       "title": "ফজলি আম",
       "image": "https://i.postimg.cc/1RYDD0fP/Hapus-Mango-removebg-preview.png",
-      "price": "৳২০টাকা/কেজি"
-    },
-    {
+      "price": "৳২০টাকা/কেজি",
+      "koliti":"কোয়ালিটি:Best",
+      "jat":"জাতঃফজলি",
+      "sthok":"স্টোকঃপন্যটি খুব শিগ্রই পাওয়া যাবে"
+
+    }, {
       "title": "ফজলি আম",
       "image": "https://i.postimg.cc/1RYDD0fP/Hapus-Mango-removebg-preview.png",
-      "price": "৳২০টাকা/কেজি"
-    },
-    {
+      "price": "৳২০টাকা/কেজি",
+      "koliti":"কোয়ালিটি:Best",
+      "jat":"জাতঃফজলি",
+      "sthok":"স্টোকঃপন্যটি খুব শিগ্রই পাওয়া যাবে"
+
+    }, {
       "title": "ফজলি আম",
       "image": "https://i.postimg.cc/1RYDD0fP/Hapus-Mango-removebg-preview.png",
-      "price": "৳২০টাকা/কেজি"
-    },
-    {
+      "price": "৳২০টাকা/কেজি",
+      "koliti":"কোয়ালিটি:Best",
+      "jat":"জাতঃফজলি",
+      "sthok":"স্টোকঃপন্যটি খুব শিগ্রই পাওয়া যাবে"
+
+    }, {
       "title": "ফজলি আম",
       "image": "https://i.postimg.cc/1RYDD0fP/Hapus-Mango-removebg-preview.png",
-      "price": "৳২০টাকা/কেজি"
-    }
+      "price": "৳২০টাকা/কেজি",
+      "koliti":"কোয়ালিটি:Best",
+      "jat":"জাতঃফজলি",
+      "sthok":"স্টোকঃপন্যটি খুব শিগ্রই পাওয়া যাবে"
+
+    }, {
+      "title": "ফজলি আম",
+      "image": "https://i.postimg.cc/1RYDD0fP/Hapus-Mango-removebg-preview.png",
+      "price": "৳২০টাকা/কেজি",
+      "koliti":"কোয়ালিটি:Best",
+      "jat":"জাতঃফজলি",
+      "sthok":"স্টোকঃপন্যটি খুব শিগ্রই পাওয়া যাবে"
+
+    },
   ];
   @override
   Widget build(BuildContext context) {
@@ -87,6 +123,10 @@ class _MangoState extends State<Mango> {
                               builder: (context) => Ditels(
                                     imageUrl: imageData[index]["image"],
                                     title: imageData[index]["title"],
+                                    koliti:imageData[index]["koliti"],
+                                    jat:imageData[index]["jat"],
+                                    sthok:imageData[index]["sthok"],
+                                    price:imageData[index]["price"]
                                   )));
                         },
                         child: Column(
@@ -136,7 +176,7 @@ class _MangoState extends State<Mango> {
                               ),
                             ),
                             const SizedBox(
-                              height: 10,
+                              height: 25,
                             ),
                           ],
                         ),

@@ -306,3 +306,23 @@ ButtonStyle AppButtonStyle() {
       backgroundColor: Colors.green,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)));
 }
+
+
+
+// Text Filde
+
+InputDecoration AppInputDecoration(label){
+  return InputDecoration(
+      focusedBorder:   OutlineInputBorder(
+        borderSide:  BorderSide(color:Colors.black45 , width: 1),
+      ),
+      fillColor: Colors.white,
+      filled: true,
+      contentPadding: EdgeInsets.fromLTRB(20, 10, 10, 20),
+      enabledBorder:  OutlineInputBorder(
+        borderSide:  BorderSide(color:Colors.white , width: 0.0),
+      ),
+      border: OutlineInputBorder(),
+      labelText: label
+  );
+}

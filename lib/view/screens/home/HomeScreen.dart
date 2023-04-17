@@ -248,9 +248,14 @@ class _HomeScreenState extends State<HomeScreen> {
                           onTap: () {
                             Navigator.of(context).push(MaterialPageRoute(
                                 builder: (context) => Ditels(
-                                      imageUrl: imageData[index]["image"],
-                                      title: imageData[index]["title"],
+                                    imageUrl: imageData[index]["image"],
+                                    title: imageData[index]["title"],
+                                    koliti: imageData[index]["koliti"],
+                                    jat: imageData[index]["jat"],
+                                    sthok: imageData[index]["sthok"],
+                                    price:imageData[index]["price"]
                                     )));
+                                    
                           },
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
